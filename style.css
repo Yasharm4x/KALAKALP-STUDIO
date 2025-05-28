@@ -1,76 +1,135 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   font-family: 'Inter', sans-serif;
   background: #fff8f0;
   color: #333;
-  scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
-h1, h2 {
-  font-family: 'Playfair Display', serif;
-  color: #8b0000;
-}
-
-.container {
-  width: 90%;
-  max-width: 1200px;
-  margin: auto;
-}
-
+/* Header */
 header {
   background: #fff;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  position: relative; /* changed from sticky to relative */
+  position: sticky;
+  top: 0;
   z-index: 1000;
 }
 
-header .container {
+.header-top {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 1rem 0;
-}
-
-nav ul {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  gap: 1.5rem;
-  flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
+  padding: 1rem 2rem;
+  position: relative;
 }
 
-nav a {
-  text-decoration: none;
+.site-title {
+  font-family: 'Playfair Display', serif;
   color: #8b0000;
+  font-size: 1.8rem;
+  margin: 0;
+}
+
+#langToggleBtn {
+  position: absolute;
+  left: 1rem;
+  top: 1rem;
   font-weight: bold;
+  background: transparent;
+  border: 2px solid #8b0000;
+  color: #8b0000;
+  border-radius: 4px;
+  padding: 6px 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
-nav a:hover {
-  color: #e67300;
-}
-
-.hero {
-  background: url('https://source.unsplash.com/1600x600/?kathak') center/cover no-repeat;
+#langToggleBtn:hover {
+  background: #8b0000;
   color: #fff;
-  text-align: center;
-  padding: 6rem 2rem;
 }
 
-.hero-content h2 {
+.hamburger {
+  position: absolute;
+  top: 1.2rem;
+  right: 1rem;
+  font-size: 24px;
+  background: transparent;
+  color: #8b0000;
+  border: none;
+  cursor: pointer;
+  z-index: 3000;
+}
+
+/* Sidebar */
+.mobile-nav {
+  display: none;
+  flex-direction: column;
+  background: #fff;
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 250px;
+  padding-top: 60px;
+  z-index: 2000;
+  box-shadow: -2px 0 6px rgba(0,0,0,0.2);
+  border-left: 1px solid #eee;
+}
+
+.mobile-nav a {
+  padding: 1rem;
+  text-decoration: none;
+  color: #7a0000;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.mobile-nav a:hover,
+.mobile-nav a.active {
+  background-color: #f7e6e6;
+}
+
+.mobile-nav.show {
+  display: flex;
+}
+
+.backdrop {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 1500;
+}
+
+.backdrop.show {
+  display: block;
+}
+
+/* Hero Section */
+.hero {
+  background: #fff3e6;
+  text-align: center;
+  padding: 5rem 2rem 4rem;
+}
+
+.hero h2 {
+  color: #8b0000;
   font-size: 2.5rem;
   margin-bottom: 1rem;
 }
 
-.hero-content p {
+.hero p {
   font-size: 1.2rem;
-}
-
-#hero-text {
   color: #8b0000;
   font-weight: bold;
 }
 
+/* Buttons */
 .btn {
   margin-top: 1.5rem;
   padding: 0.7rem 1.5rem;
@@ -78,16 +137,23 @@ nav a:hover {
   color: #fff;
   text-decoration: none;
   font-weight: bold;
+  border: none;
   border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.1s;
 }
 
 .btn:hover {
   background: #a83232;
 }
 
+.btn:active {
+  transform: scale(0.96);
+}
+
+/* Sections */
 .section {
   padding: 4rem 2rem;
-  background-color: #fff;
 }
 
 .section:nth-of-type(even) {
@@ -97,8 +163,11 @@ nav a:hover {
 .section h2 {
   text-align: center;
   margin-bottom: 2rem;
+  font-family: 'Playfair Display', serif;
+  color: #8b0000;
 }
 
+/* Table */
 table {
   width: 100%;
   border-collapse: collapse;
@@ -109,8 +178,28 @@ table th, table td {
   padding: 0.75rem;
   border: 1px solid #ccc;
   text-align: center;
+  font-size: 1rem;
 }
 
+/* Online/Offline Badges */
+.badge {
+  display: inline-block;
+  padding: 0.2em 0.6em;
+  border-radius: 0.25rem;
+  font-weight: bold;
+  color: #fff;
+  font-size: 0.75rem;
+}
+
+.badge.online {
+  background: #2e7d32;
+}
+
+.badge.offline {
+  background: #c62828;
+}
+
+/* Gallery */
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -118,30 +207,41 @@ table th, table td {
 }
 
 .gallery-grid img {
-  height: 250px;
   width: 100%;
-  object-fit: contain;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
   background: #fff;
-  padding: 10px;
-  border-radius: 10px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
 }
 
+.gallery-grid img:hover {
+  transform: scale(1.05);
+}
+
+/* Testimonials */
 blockquote {
   background: #fdf3e7;
   border-left: 5px solid #8b0000;
   margin: 1rem 0;
   padding: 1rem;
   font-style: italic;
+  color: #444;
 }
 
+/* Footer */
 footer {
   text-align: center;
   padding: 1rem;
   background: #8b0000;
   color: #fff;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+  box-shadow: 0 -1px 5px rgba(0,0,0,0.05);
 }
 
+/* Animation */
 .fade-in {
   opacity: 0;
   transform: translateY(20px);
@@ -153,40 +253,26 @@ footer {
   transform: translateY(0);
 }
 
-.lang-toggle {
-  position: fixed;
-  top: 10px;
-  right: 20px;
-  z-index: 1001;
-}
-
-.lang-toggle button {
-  margin-left: 10px;
-  padding: 6px 10px;
-  font-weight: bold;
-  background: #8b0000;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-.lang-toggle button:hover {
-  background: #a83232;
-}
-
+/* Responsive */
 @media (max-width: 768px) {
-  .hero-content h2 {
+  .hero h2 {
     font-size: 1.8rem;
   }
 
-  .hero-content p {
+  .hero p {
     font-size: 1rem;
   }
 
-  nav ul {
-    flex-direction: column;
-    gap: 0.75rem;
+  .site-title {
+    font-size: 1.5rem;
+  }
+
+  table th, table td {
+    font-size: 0.9rem;
+  }
+
+  .gallery-grid img {
+    height: 200px;
   }
 }
 
