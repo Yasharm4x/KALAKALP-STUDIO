@@ -8,28 +8,48 @@
   <meta name="author" content="Kalakalp Studio">
   <title>Kalakalp Studio</title>
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Gotu&family=Eczar&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
-    <div class="header-top">
-      <button id="langToggleBtn" aria-label="Toggle language" onclick="toggleLanguage()">हिंदी</button>
-      <h1 class="site-title">Kalakalp Studio</h1>
-    </div>
+
+  <!-- Header patch (buttons only) -->
+  <header class="header-buttons patch">
+    <button id="langToggleBtn" aria-label="Toggle language" onclick="toggleLanguage()">हिंदी</button>
     <button id="hamburgerBtn" class="hamburger" aria-label="Menu">&#9776;</button>
   </header>
 
+  <!-- Mobile Navigation -->
   <nav id="mobileNav" class="mobile-nav" role="navigation">
     <a href="#home">Home</a>
     <a href="#about">About</a>
+    <a href="#founder">Founder</a>
     <a href="#classes">Classes</a>
+    <a href="#events">Events</a>
     <a href="#gallery">Gallery</a>
     <a href="#testimonials">Testimonials</a>
     <a href="#contact">Contact</a>
   </nav>
   <div id="backdrop" class="backdrop"></div>
 
-  <section id="home" class="hero fade-in">
+ <!-- Logo Section -->
+<section class="logo-patch patch fade-in">
+  <img src="images/logo.png" alt="Kalakalp Logo" class="logo-img" />
+</section>
+
+<!-- Studio Highlights Video Section (without patch class) -->
+<section class="video-section section fade-in">
+  <div class="container">
+    <h2 class="section-title">Kalakalp Studio Highlights</h2>
+    <video controls width="100%" height="400">
+      <source src="videos/highlights.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+</section>
+
+
+  <!-- Hero section -->
+  <section id="home" class="hero fade-in patch">
     <div class="hero-content">
       <h2 id="main-heading">Tradition in Motion</h2>
       <p id="hero-text">कथक की शास्त्रीय परंपरा में आपकी स्वागत है</p>
@@ -37,15 +57,32 @@
     </div>
   </section>
 
+  <!-- About section -->
   <section id="about" class="section fade-in">
     <div class="container">
       <h2 id="about-title">About Us</h2>
       <p id="about-text">
-        Rooted in a rich legacy of classical dancers, Kalakalp Studio was founded with a deep commitment to preserving and promoting the timeless elegance of Kathak. We believe in nurturing not only technique but also the spirit of this classical art form through disciplined training and soulful performances. Our carefully crafted curriculum encompasses the foundational elements of Kathak — Tatkaar (footwork), Hastak (hand gestures), Abhinaya (expression), and the art of narrative storytelling through rhythm and movement. Whether you're a beginner or an advanced practitioner, Kalakalp Studio provides a space where tradition meets passion, allowing each dancer to explore the depth and grace of Kathak in its purest form.
+        KalaKalp, The Art studio, is a musical mission to promote, preserve, nurture and bloom the art and culture of our nation, that is, the conclusively rich-in-heritage Bharat.<br><br>
+        Prayaas, literally meaning ‘effort’, is one such event diligently curated by its Director Manjiri Wathare.<br><br>
+        Staying true to its ten-year long tradition, Prayaas has been instrumental in promoting, nurturing, and reveling in the affluence of Bhartiya culture by presenting giants from the fields of music and dance, alongside budding artistes. It is an exceptional combination of ‘old to not-so-old to the new, traditional to modern to contemporary’, showcasing the best of arts and music from all over the world.<br><br>
+        In today’s times of transition when our nation is transforming drastically in all walks of life and heading towards being a developed nation, it becomes all the more significant to emphasize and highlight our roots. “Where we come from” forms a compact foundation for any big leap, giving a rock-solid base to rejoice in the rich and colorful reservoir of wisdom through art and culture. We must never have a myopic perspective; understanding the wide range of global music and dance allows us to imbibe a beautiful blend of sanskar in current and future generations.
       </p>
     </div>
   </section>
 
+  <!-- Founder section -->
+  <section id="founder" class="section fade-in patch">
+    <div class="container">
+      <h2>Founder</h2>
+      <p>
+        <strong>Manjiri Chinmay Wathare</strong> is a versatile artist trained in Hindustani Classical Music and Kathak. She is the founder of Kalakalp Studio and the visionary behind "Prayaas" — an event series blending classical heritage with modern presentation.<br><br>
+        With over a decade of dedication to the arts, she has curated performances, mentored budding artists, and upheld the Indian cultural ethos through immersive experiences. Her work emphasizes the connection between tradition and innovation, fostering a generation of culturally aware performers.<br><br>
+        Manjiri continues to inspire and lead through her commitment to artistic expression, blending music, dance, and storytelling in powerful ways that transcend age and genre.
+      </p>
+    </div>
+  </section>
+
+  <!-- Classes section -->
   <section id="classes" class="section fade-in">
     <div class="container">
       <h2>Classes</h2>
@@ -58,6 +95,17 @@
     </div>
   </section>
 
+  <!-- Events section -->
+  <section id="events" class="section fade-in patch">
+    <div class="container">
+      <h2>Events</h2>
+      <p>
+        Kalakalp Studio regularly hosts cultural evenings, student recitals, classical baithaks, and community showcases. “Prayaas” — our flagship event — presents a blend of performances by acclaimed maestros and passionate learners, celebrating both heritage and innovation.
+      </p>
+    </div>
+  </section>
+
+  <!-- Gallery -->
   <section id="gallery" class="section fade-in">
     <div class="container">
       <h2>Gallery</h2>
@@ -70,26 +118,29 @@
     </div>
   </section>
 
-  <section id="testimonials" class="section fade-in">
+  <!-- Testimonials -->
+  <section id="testimonials" class="section fade-in patch">
     <div class="container">
       <h2>Testimonials</h2>
       <blockquote>“My daughter has discovered the true joy of Kathak — every class brings her closer to her roots.” – Anshu Sharma</blockquote>
       <blockquote>“As a working professional, Kathak has become my form of meditation — it brings clarity, balance, and a renewed appreciation for our classical heritage.” – Rahul Sethi</blockquote>
       <blockquote>“A beautiful space where classical dance is taught with love, structure, and sincerity.” – Rashi Makadia</blockquote>
       <blockquote>“Learning Kathak at Kalakalp has deepened my connection to Indian culture and taught me the value of discipline through movement.” – Yash Sharma</blockquote>
-      <blockquote>“Kalakalp became more than a dance class for me — it became a sanctuary where tradition guided my spirit, and every movement felt like a return to something eternal.” – Tintin</blockquote>
+      <blockquote>“Kalakalp became more than a dance class for me — it became a sanctuary where tradition guided my spirit.” – Tintin</blockquote>
     </div>
   </section>
 
+  <!-- Contact -->
   <section id="contact" class="section fade-in">
     <div class="container">
-      <h2>Contact Us</h2>
-      <p><strong>Address:</strong> Kalakalp Studio, Hyderabad, Bharat</p>
-      <p><strong>Email:</strong> contact@kalakalp.in</p>
-      <p><strong>Phone:</strong> +91 9876543210</p>
+      <h2>Contact</h2>
+      <p><strong>Manjiri Chinmay Wathare</strong></p>
+      <p><strong>Phone:</strong> <a href="tel:+919594994892">+91-9594994892</a></p>
+      <p><strong>Email:</strong> <a href="mailto:manjiricwathare@gmail.com">manjiricwathare@gmail.com</a></p>
     </div>
   </section>
 
+  <!-- Footer -->
   <footer>
     <p>&copy; 2025 Kalakalp Studio. All rights reserved.</p>
   </footer>
