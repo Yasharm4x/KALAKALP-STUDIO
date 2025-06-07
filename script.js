@@ -1,3 +1,4 @@
+// Section Observer
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
@@ -31,33 +32,91 @@ Prayaas, literally meaning ‘effort’, is one such event diligently curated by
 
 Staying true to its ten-year long tradition, Prayaas, which has been instrumental in promoting and nurturing and reveling the affluence of Bhartiya culture by presenting the giants from the field of music and dance; juxtaposing with the budding artistes, is an exceptional combination of ‘old to not-so-old to the new, traditional to modern to contemporary’ and so on, in alignment with our Indian art and culture showcases the best of arts and music from all over the world.
 
-In today’s times of transition when our nation is transforming drastically in all walks of life and heading towards being a developed nation, it becomes all the more significant to emphasize and highlight our roots. “Where we come from” forms a compact foundation for any big leap and flight giving a rock-solid base to rejoice the rich and colorful reservoir of wisdom through art and culture. Nonetheless we can never have a myopic perspective and restrict our growth as artistes; obviously then one cannot overlook the wide range of music and dance happening across the globe thus imbibing a beautiful blend of sanskar in the current generation and generations to follow.`
+In today’s times of transition when our nation is transforming drastically in all walks of life and heading towards being a developed nation, it becomes all the more significant to emphasize and highlight our roots. “Where we come from” forms a compact foundation for any big leap and flight giving a rock-solid base to rejoice the rich and colorful reservoir of wisdom through art and culture. Nonetheless we can never have a myopic perspective and restrict our growth as artistes; obviously then one cannot overlook the wide range of music and dance happening across the globe thus imbibing a beautiful blend of sanskar in the current generation and generations to follow.`,
+
+      eventsText: `Kalakalp Studio regularly hosts cultural evenings, student recitals, classical baithaks, and community showcases. “Prayaas” — our flagship event — presents a blend of performances by acclaimed maestros and passionate learners, celebrating both heritage and innovation.`,
+
+      founderText: `Mrs. Manjiri Chinmay Wathare was initiated into dance by Guru Archana Anuradha. Under her able guidance, she started her training at the age of nine. There she was also fortunate to seek blessings from Guru Lt. Madhurita Sarang. Thereafter, she continued under the tutelage of Guru Pandit Rajendra Gangani ji, a renowned Kathak maestro of the Jaipur Gharana and the torchbearer of its purest form. It is here that Manjiri learned the subtle and technical intricacies of Kathak dance.
+
+Manjiri has completed her “Nritya Visharad“ in Kathak from Akhil Bhartiya Gandharv Mahavidyalaya Mandal. She has also completed a Master's in Kathak from Nalanda Dance & Research Centre, Mumbai, and a Bachelor’s in Fashion–Apparel Design from SNDT University. She is a registered examiner at ABGMVM.
+
+Mrs. Manjiri Chinmay Wathare, founder of Kalakalp – The Art Studio, has skillfully taken up this responsibility with the blessings of Guru Pandit Shri Rajendra Gangani.
+
+Guruji, as Pandit Rajendra Gangani ji is fondly addressed, has not only been instrumental in blessing his disciples with vast practical knowledge but also in encouraging them to pass on this wisdom, thus creating a boundless hierarchy of Kathak.
+
+Taking a cue from his teachings, Kalakalp – The Kathak Studio – was established in January 2014.
+
+Manjiri has given many solo performances and has participated in numerous group compositions and choreographic pieces directed by leading Gurus like Pandit Rajendra Gangani ji himself, Smt. Rajshree Shirke, Shri Dhirendra Tiwari, and Archana Anuradha.`,
+
+      pastPerformances: [
+        "Pt. Ram Marathe Smriti Sangeet Samaroh – Thane, 2023",
+        "Sanskrti Arts Festival, 2023",
+        "Tarana Festival – Lehja Foundation, 2023",
+        "Lecture Demonstration – Rotary Club Main Branch Thane, 2018",
+        "Mulundkar Festival, Mumbai, 2017",
+        "International Dance Festival, Mumbai, 2017",
+        "Guru Purnima – Indore, 2016",
+        "Rasaraj, Mumbai, 2016",
+        "Aaveg – NCPA Mumbai, 2013",
+        "Nrityark – Pune, 2012",
+        "Akhil Bhartiya Sanskrutik Sangh – 2nd Prizes (2007–2009)",
+        "Ravan Mandodari – Bhubaneswar, 2008",
+        "Ravan Mandodari – Chennai, 2009",
+        "Ase Pawasache Yene – Pune, 2006",
+        "Chinchwad Festival – Ase Pawasache Yene, 2005"
+      ]
     },
     hi: {
       heading: "परंपरा में गति",
       subheading: "कथक की शास्त्रीय परंपरा में आपकी स्वागत है",
       explore: "कक्षाएँ देखें",
       aboutTitle: "हमारे बारे में",
-      aboutText: `कला कल्प – एक कला संकल्प
+      aboutText: `कला कल्प – एक कला संकल्प...
 
-कला कल्प, द आर्ट स्टूडियो, एक संगीतमय अभियान है जिसका उद्देश्य है हमारे राष्ट्र — अर्थात् समृद्ध सांस्कृतिक विरासत से भरपूर भारत — की कला और संस्कृति का संरक्षण, संवर्धन, पोषण और प्रसार करना।
+(🔁 Add your full Hindi about section text here)`,
 
-'प्रयास', जिसका शाब्दिक अर्थ है "प्रयत्न", इसी लक्ष्य की ओर एक समर्पित आयोजन है, जिसे इसकी निदेशक मंजिरी वाठारे द्वारा संजीदगी से संकल्पित किया गया है।
+      eventsText: `कलाकल्प स्टूडियो नियमित रूप से सांस्कृतिक संध्याओं, छात्र रीसाइटल्स, शास्त्रीय बैठकों और सामुदायिक प्रस्तुतियों की मेज़बानी करता है। “प्रयास” — हमारी प्रमुख प्रस्तुति — प्रसिद्ध कलाकारों और समर्पित विद्यार्थियों की सम्मिलित प्रस्तुति है जो परंपरा और नवाचार का उत्सव है।`,
 
-अपने दस वर्षों की परंपरा के प्रति सच्ची निष्ठा रखते हुए, 'प्रयास' ने भारतीय संगीत और नृत्य की महान विभूतियों को मंच पर प्रस्तुत कर, साथ ही उभरते कलाकारों को भी अवसर प्रदान कर, भारतीय संस्कृति की समृद्धि को संरक्षित और उत्सव रूप में मनाने का कार्य किया है। यह कार्यक्रम एक अनूठा संगम है — "पुराने से नए, पारंपरिक से आधुनिक और समकालीन", जिसमें भारतीय कला और संस्कृति के साथ-साथ विश्वभर की संगीत एवं कला परंपराओं को भी समान रूप से मंच प्रदान किया जाता है।
+      founderText: `(🔁 Your full Hindi founder section)`,
 
-आज के इस परिवर्तनशील युग में, जब हमारा राष्ट्र जीवन के प्रत्येक क्षेत्र में तीव्र रूप से विकास की ओर अग्रसर है और एक विकसित राष्ट्र बनने की दिशा में कदम बढ़ा रहा है, तब हमारी जड़ों की ओर लौटना और उन्हें उजागर करना और भी आवश्यक हो जाता है। "हम कहाँ से आते हैं" — यह भाव किसी भी ऊँची उड़ान और सफलता की मजबूत नींव होता है, जो हमें हमारी कला और संस्कृति के माध्यम से ज्ञान, रंग और समृद्ध परंपरा का उत्सव मनाने का अवसर देता है।
-
-साथ ही, हम केवल सीमित दृष्टिकोण रखकर स्वयं को एक कलाकार के रूप में सीमित नहीं कर सकते; इसलिए विश्वभर में हो रही संगीत और नृत्य की विविधता को समझना और आत्मसात करना भी उतना ही आवश्यक है। यह संतुलन ही आने वाली पीढ़ियों में संस्कार और सृजनात्मकता का सुंदर मेल उत्पन्न करता है।`
+      pastPerformances: [
+        "पं. राम मराठे स्मृति संगीत समारोह – ठाणे, 2023",
+        "संस्कृति आर्ट्स फेस्टिवल, 2023",
+        "तराना फेस्टिवल – लहजा फाउंडेशन, 2023",
+        "लेक्चर डेमोंस्ट्रेशन – रोटरी क्लब, ठाणे, 2018",
+        "मुलुंडकर फेस्टिवल, मुंबई, 2017",
+        "इंटरनेशनल डांस फेस्टिवल, मुंबई, 2017",
+        "गुरु पूर्णिमा – इंदौर, 2016",
+        "रसाराज, मुंबई, 2016",
+        "आवेज – एनसीपीए मुंबई, 2013",
+        "नृत्यार्क – पुणे, 2012",
+        "अखिल भारतीय सांस्कृतिक संघ – द्वितीय पुरस्कार (2007–2009)",
+        "रावण मंदोदरी – भुवनेश्वर, 2008",
+        "रावण मंदोदरी – चेन्नई, 2009",
+        "असे पावसाचे येणे – पुणे, 2006",
+        "चिंचवड फेस्टिवल – असे पावसाचे येणे, 2005"
+      ]
     }
   };
 
   const t = translations[lang];
+
+  // Apply text
   document.getElementById('main-heading').textContent = t.heading;
   document.getElementById('hero-text').textContent = t.subheading;
   document.getElementById('explore-btn').textContent = t.explore;
   document.getElementById('about-title').textContent = t.aboutTitle;
   document.getElementById('about-text').textContent = t.aboutText;
+  document.getElementById('events-text').textContent = t.eventsText;
+  document.getElementById('founder-text').textContent = t.founderText;
+
+  const perfList = document.getElementById('performances-list');
+  perfList.innerHTML = "";
+  t.pastPerformances.forEach(item => {
+    const li = document.createElement('li');
+    li.textContent = item;
+    perfList.appendChild(li);
+  });
 }
 
 // Hamburger Toggle
@@ -88,4 +147,10 @@ document.querySelectorAll('.mobile-nav a').forEach(link => {
     document.body.style.overflow = '';
   });
 });
+
+// Set language on first load
+document.addEventListener('DOMContentLoaded', () => {
+  setLanguage(currentLang);
+});
+
 
